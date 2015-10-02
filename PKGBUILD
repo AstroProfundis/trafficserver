@@ -2,7 +2,7 @@
 # Contributor: David Roheim <david dot roheim at gmail dot com>
 
 pkgname='trafficserver'
-pkgver=5.3.1
+pkgver=6.0.0
 pkgrel=1
 pkgdesc="Apache Traffic Server"
 url="http://trafficserver.apache.org/"
@@ -16,7 +16,7 @@ source=(
     trafficserver.tmpfiles
     trafficserver.service.in.patch)
 
-md5sums=('9c0e2450b1dd1bbdd63ebcc344b5a813'
+md5sums=('4713f41adea06521078aefda77686c6e'
          'fc8ab2b6d01e22fb376832fb13137db1'
          '74ba08091f580f8984eee8db0f7e4d27')
 
@@ -82,7 +82,7 @@ prepare() {
 build() {
     cd "${srcdir}"/"${pkgname}-${pkgver}"
 
-    ./configure --with-user=tserver --enable-layout=Arch
+    ./configure --with-user=http --enable-layout=Arch
     make
 }
 

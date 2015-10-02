@@ -1,5 +1,6 @@
 src/
 pkg/
 trafficserver-*.pkg.tar.xz
+trafficserver-*.pkg.tar.xz.sig
 trafficserver-*.tar.bz2
 .*.swp
